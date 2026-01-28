@@ -32,13 +32,13 @@ Deploying your own instance for customers is easy.
 
 ### 1. Backend (Render)
 Click the button below to deploy the backend to Render.
-[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/uppalapatisumanth/API-Factory)
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/uppalapatisumanth/XLSX-to-API-Generator)
 
-*   **Note**: After deploying, copy the **Backend URL** (e.g., `https://api-factory-backend.onrender.com`).
+*   **Note**: After deploying, copy the **Backend URL** (e.g., `https://xlsx-to-api-generator-backend.onrender.com`).
 
 ### 2. Frontend (Vercel)
 Click the button below to deploy the frontend.
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fuppalapatisumanth%2FAPI-Factory%2Ftree%2Fmain%2Ffrontend&env=VITE_API_URL&envDescription=Backend%20URL%20(including%20https%3A%2F%2F)&project-name=api-factory-frontend&repository-name=api-factory-frontend)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fuppalapatisumanth%2FXLSX-to-API-Generator%2Ftree%2Fmain%2Ffrontend&env=VITE_API_URL&envDescription=Backend%20URL%20(including%20https%3A%2F%2F)&project-name=xlsx-to-api-generator-frontend&repository-name=xlsx-to-api-generator-frontend)
 
 *   **Important**: During setup, Vercel will ask for `VITE_API_URL`. Paste the **Backend URL** you got from Render.
 
