@@ -56,40 +56,47 @@ git commit -m "Initial push for distribution"
 
 echo Attempting standard push...
 git push -u origin main
+IF %ERRORLEVEL% EQU 0 GOTO SUCCESS
 
-if %ERRORLEVEL% NEQ 0 (
-    echo.
-    echo ========================================================
-    echo  CONFLICT DETECTED!
-    echo ========================================================
-    echo It looks like your GitHub repository already has some files
-    echo (like a README or License) that you don't have locally.
-    echo.
-    echo Since this is an initial push, we can FORCE overwrite GitHub
-    echo with your local files.
-    echo.
-    set /p FORCE_CHOICE="Do you want to FORCE PUSH (Overwrite GitHub)? (Y/N): "
-    
-    if /I "%FORCE_CHOICE%"=="Y" (
-        echo.
-        echo Overwriting GitHub with local files...
-        git push -u origin main --force
-        if %ERRORLEVEL% EQU 0 (
-            echo.
-            echo SUCCESS! Forced push completed.
-        ) else (
-            echo.
-            echo ERROR: Force push failed.
-        )
-    ) else (
-        echo.
-        echo You chose not to force push. You may need to run 'git pull' manually.
-    )
-) else (
-    echo.
-    echo ========================================================
-    echo       SUCCESS! Project pushed to GitHub.
-    echo ========================================================
-)
+REM --- ERROR HANDLING SECTION ---
+echo.
+echo ========================================================
+echo  CONFLICT DETECTED!
+echo ========================================================
+echo It looks like your GitHub repository already has some files
+echo (like a README or License) that you don't have locally.
+echo.
+echo Since this is an initial push, we can FORCE overwrite GitHub
+echo with your local files.
+echo.
+set /p FORCE_CHOICE="Do you want to FORCE PUSH (Overwrite GitHub)? (Y/N): "
 
+if /I "%FORCE_CHOICE%"=="Y" GOTO DO_FORCE_PUSH
+
+echo.
+echo You chose not to force push. You may need to run 'git pull' manually.
+GOTO END
+
+:DO_FORCE_PUSH
+echo.
+echo Overwriting GitHub with local files...
+git push -u origin main --force
+IF %ERRORLEVEL% NEQ 0 GOTO FORCE_FAIL
+
+echo.
+echo SUCCESS! Forced push completed.
+GOTO SUCCESS
+
+:FORCE_FAIL
+echo.
+echo ERROR: Force push failed. Check your internet or permissions.
+GOTO END
+
+:SUCCESS
+echo.
+echo ========================================================
+echo       SUCCESS! Project pushed to GitHub.
+echo ========================================================
+
+:END
 pause
