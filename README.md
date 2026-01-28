@@ -25,6 +25,25 @@ This project bridges the gap between manual API documentation and executable tes
 -   **Modern UI**: Clean, responsive web interface built with React and TailwindCSS.
 -   **Extensible Architecture**: Modular backend design allows for easy addition of new capabilities.
 
+
+## Deployment
+
+Deploying your own instance for customers is easy.
+
+### 1. Backend (Render)
+Click the button below to deploy the backend to Render.
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/uppalapatisumanth/API-Factory)
+
+*   **Note**: After deploying, copy the **Backend URL** (e.g., `https://api-factory-backend.onrender.com`).
+
+### 2. Frontend (Vercel)
+Click the button below to deploy the frontend.
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fuppalapatisumanth%2FAPI-Factory%2Ftree%2Fmain%2Ffrontend&env=VITE_API_URL&envDescription=Backend%20URL%20(including%20https%3A%2F%2F)&project-name=api-factory-frontend&repository-name=api-factory-frontend)
+
+*   **Important**: During setup, Vercel will ask for `VITE_API_URL`. Paste the **Backend URL** you got from Render.
+
+---
+
 ## Tech Stack
 
 ## XLSX File Structure (Mandatory)
