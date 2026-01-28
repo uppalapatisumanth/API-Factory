@@ -52,7 +52,8 @@ git add .
 
 echo.
 echo [5/5] Committing and Pushing...
-git commit -m "Initial push for distribution"
+set "timestamp=%date% %time%"
+git commit -m "Update: %timestamp%"
 
 echo Attempting standard push...
 git push -u origin main
