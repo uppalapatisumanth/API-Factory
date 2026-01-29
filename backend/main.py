@@ -47,7 +47,8 @@ logger.info("Successfully loaded 'processing' router.")
 async def startup_event():
     logger.info("Registered Routes:")
     for route in app.routes:
-        logger.info(f"{route.path} [{route.methods}]")
+        methods = getattr(route, "methods", None)
+        logger.info(f"{route.path} [{methods}]")
 
 @app.get("/health")
 def health_check():
