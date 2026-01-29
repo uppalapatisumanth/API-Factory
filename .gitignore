@@ -7,6 +7,17 @@ __pycache__/
 .DS_Store
 Thumbs.db
 
+
+# Backend - Generated Content
+backend/artifacts_storage/
+backend/pytest_tests/
+backend/report.json
+backend/index.html
+*.log
+backend/upload_error.log
+backend/backend.log
+backend/backend_debug.log
+
 # Frontend
 frontend/node_modules/
 frontend/dist/
@@ -14,3 +25,4 @@ frontend/.env.local
 frontend/.env.development.local
 frontend/.env.test.local
 frontend/.env.production.local
+

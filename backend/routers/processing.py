@@ -1,14 +1,12 @@
-from fastapi import APIRouter, UploadFile, File, BackgroundTasks
-import uuid
-
 from fastapi import APIRouter, UploadFile, File, BackgroundTasks, HTTPException
 from fastapi.responses import FileResponse
 import uuid
 import os
 import shutil
 import json
+import traceback
 from pathlib import Path
-from backend.services import parser, postman_generator, pytest_generator
+from services import parser, postman_generator, pytest_generator
 
 router = APIRouter(prefix="/api", tags=["processing"])
 
@@ -19,7 +17,10 @@ ARTIFACTS_DIR = Path("artifacts_storage")
 TASKS_FILE = ARTIFACTS_DIR / "tasks.json"
 
 if not ARTIFACTS_DIR.exists():
-    ARTIFACTS_DIR.mkdir()
+    try:
+        ARTIFACTS_DIR.mkdir()
+    except:
+        pass
 
 def load_tasks():
     global TASKS
@@ -31,7 +32,7 @@ def load_tasks():
             TASKS = {}
     else:
         TASKS = {}
-
+        
 def save_tasks():
     try:
         with open(TASKS_FILE, "w") as f:
@@ -47,7 +48,6 @@ def process_file_task(task_id: str, file_content: bytes, filename: str):
     TASKS[task_id]["logs"].append("Started processing file...")
     save_tasks()
 
-    
     try:
         # Step 1: Parse
         TASKS[task_id]["logs"].append("Parsing XLSX file...")
@@ -60,9 +60,9 @@ def process_file_task(task_id: str, file_content: bytes, filename: str):
         if not api_data or not api_data.get("apis"):
             TASKS[task_id]["status"] = "failed"
             TASKS[task_id]["logs"].append("No valid API definitions found in file.")
+            save_tasks()
             return
 
-        api_count = len(api_data["apis"])
         api_count = len(api_data["apis"])
         TASKS[task_id]["logs"].append(f"Found {api_count} API definitions.")
         TASKS[task_id]["api_preview"] = api_data["apis"]
@@ -93,17 +93,24 @@ def process_file_task(task_id: str, file_content: bytes, filename: str):
         TASKS[task_id]["status"] = "failed"
         TASKS[task_id]["logs"].append(f"ERROR: {str(e)}")
         save_tasks()
-        # print error to console for debugging
-        import traceback
         traceback.print_exc()
 
 @router.post("/upload")
 async def upload_file(background_tasks: BackgroundTasks, file: UploadFile = File(...)):
+    log_file = r"d:\ais\api\backend\backend_debug.log"
     try:
+        with open(log_file, "a") as f:
+            f.write(f"\n[UPLOAD] Starting upload for file: {file.filename}\n")
+            f.write(f"[UPLOAD] CWD: {os.getcwd()}\n")
+            
         if not file.filename.endswith(".xlsx"):
              raise HTTPException(status_code=400, detail="Invalid file format. Please upload .xlsx")
-             
+              
         content = await file.read()
+        
+        with open(log_file, "a") as f:
+            f.write(f"[UPLOAD] File read successfully. Size: {len(content)} bytes\n")
+
         task_id = str(uuid.uuid4())
         
         TASKS[task_id] = {
@@ -115,12 +122,20 @@ async def upload_file(background_tasks: BackgroundTasks, file: UploadFile = File
         
         background_tasks.add_task(process_file_task, task_id, content, file.filename)
         
+        with open(log_file, "a") as f:
+            f.write(f"[UPLOAD] Task created: {task_id}\n")
+            
         return {"task_id": task_id, "message": "Upload successful, processing started."}
     except HTTPException:
         raise
     except Exception as e:
-        import traceback
-        traceback.print_exc()
+        err_msg = traceback.format_exc()
+        try:
+            with open(log_file, "a") as f:
+                f.write(f"[UPLOAD ERROR] {err_msg}\n")
+        except:
+            pass
+        print(err_msg)
         raise HTTPException(status_code=500, detail=f"Upload error: {str(e)}")
 
 @router.get("/status/{task_id}")

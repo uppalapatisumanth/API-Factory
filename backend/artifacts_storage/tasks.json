@@ -2213,5 +2213,1127 @@
                 }
             }
         ]
+    },
+    "4e86c38d-5d63-46f9-a5fe-cb1263c7862c": {
+        "status": "completed",
+        "logs": [
+            "File uploaded. Waiting for processing...",
+            "Started processing file...",
+            "Parsing XLSX file...",
+            "Found 2 API definitions.",
+            "Generating Postman Collection...",
+            "Generating Pytest structure...",
+            "Processing finished successfully."
+        ],
+        "artifacts": {
+            "postman": "artifacts_storage\\4e86c38d-5d63-46f9-a5fe-cb1263c7862c\\postman_collection.json",
+            "pytest": "artifacts_storage\\4e86c38d-5d63-46f9-a5fe-cb1263c7862c\\pytest_tests.zip"
+        },
+        "api_preview": [
+            {
+                "name": "Get Auth Token",
+                "method": "POST",
+                "url": "getAuthToken",
+                "ref_id": "AUTH-001",
+                "module": "Authentication",
+                "body": {
+                    "login.username": "invoice2",
+                    "login.password": "vst123",
+                    "tenantId": "suprabhat-latest"
+                },
+                "body_mode": "urlencoded",
+                "headers": {
+                    "Content-Type": "application/x-www-form-urlencoded"
+                },
+                "expected_response": {
+                    "token": "<authToken>"
+                },
+                "status": 200,
+                "auth_scope": "",
+                "token_variable": "authToken",
+                "is_token_generator": true,
+                "params": {}
+            },
+            {
+                "name": "Get Customer Profile Details",
+                "method": "GET",
+                "url": "getCustomerProfileDetails",
+                "ref_id": "CUST-001",
+                "module": "Customer",
+                "body": {},
+                "body_mode": "json",
+                "headers": {
+                    "token": "{{authToken}}"
+                },
+                "expected_response": "None",
+                "status": 200,
+                "auth_scope": "",
+                "token_variable": "token",
+                "is_token_generator": false,
+                "params": {
+                    "Key": "",
+                    "tenantId": "suprabhat-latest",
+                    "customerId": "20955",
+                    "supplierId": "HERITAGE",
+                    "facilityId": "20955"
+                }
+            }
+        ]
+    },
+    "22dcc10c-7227-4a7b-837e-da8fb50a7c3d": {
+        "status": "completed",
+        "logs": [
+            "File uploaded. Waiting for processing...",
+            "Started processing file...",
+            "Parsing XLSX file...",
+            "Found 2 API definitions.",
+            "Generating Postman Collection...",
+            "Generating Pytest structure...",
+            "Processing finished successfully."
+        ],
+        "artifacts": {
+            "postman": "artifacts_storage\\22dcc10c-7227-4a7b-837e-da8fb50a7c3d\\postman_collection.json",
+            "pytest": "artifacts_storage\\22dcc10c-7227-4a7b-837e-da8fb50a7c3d\\pytest_tests.zip"
+        },
+        "api_preview": [
+            {
+                "name": "Get Auth Token",
+                "method": "POST",
+                "url": "getAuthToken",
+                "ref_id": "AUTH-001",
+                "module": "Authentication",
+                "body": {
+                    "login.username": "invoice2",
+                    "login.password": "vst123",
+                    "tenantId": "suprabhat-latest"
+                },
+                "body_mode": "urlencoded",
+                "headers": {
+                    "Content-Type": "application/x-www-form-urlencoded"
+                },
+                "expected_response": {
+                    "token": "<authToken>"
+                },
+                "status": 200,
+                "auth_scope": "",
+                "token_variable": "authToken",
+                "is_token_generator": true,
+                "params": {}
+            },
+            {
+                "name": "Get Customer Profile Details",
+                "method": "GET",
+                "url": "getCustomerProfileDetails",
+                "ref_id": "CUST-001",
+                "module": "Customer",
+                "body": {},
+                "body_mode": "json",
+                "headers": {
+                    "token": "{{authToken}}"
+                },
+                "expected_response": "None",
+                "status": 200,
+                "auth_scope": "",
+                "token_variable": "token",
+                "is_token_generator": false,
+                "params": {
+                    "Key": "",
+                    "tenantId": "suprabhat-latest",
+                    "customerId": "20955",
+                    "supplierId": "HERITAGE",
+                    "facilityId": "20955"
+                }
+            }
+        ]
+    },
+    "3c83327d-0766-4538-a56c-8eed26e319f1": {
+        "status": "completed",
+        "logs": [
+            "File uploaded. Waiting for processing...",
+            "Started processing file...",
+            "Parsing XLSX file...",
+            "Found 2 API definitions.",
+            "Generating Postman Collection...",
+            "Generating Pytest structure...",
+            "Processing finished successfully."
+        ],
+        "artifacts": {
+            "postman": "artifacts_storage\\3c83327d-0766-4538-a56c-8eed26e319f1\\postman_collection.json",
+            "pytest": "artifacts_storage\\3c83327d-0766-4538-a56c-8eed26e319f1\\pytest_tests.zip"
+        },
+        "api_preview": [
+            {
+                "name": "Get Auth Token",
+                "method": "POST",
+                "url": "getAuthToken",
+                "ref_id": "AUTH-001",
+                "module": "Authentication",
+                "body": {
+                    "login.username": "invoice2",
+                    "login.password": "vst123",
+                    "tenantId": "suprabhat-latest"
+                },
+                "body_mode": "urlencoded",
+                "headers": {
+                    "Content-Type": "application/x-www-form-urlencoded"
+                },
+                "expected_response": {
+                    "token": "<authToken>"
+                },
+                "status": 200,
+                "auth_scope": "",
+                "token_variable": "authToken",
+                "is_token_generator": true,
+                "params": {}
+            },
+            {
+                "name": "Get Customer Profile Details",
+                "method": "GET",
+                "url": "getCustomerProfileDetails",
+                "ref_id": "CUST-001",
+                "module": "Customer",
+                "body": {},
+                "body_mode": "json",
+                "headers": {
+                    "token": "{{authToken}}"
+                },
+                "expected_response": "None",
+                "status": 200,
+                "auth_scope": "",
+                "token_variable": "token",
+                "is_token_generator": false,
+                "params": {
+                    "Key": "",
+                    "tenantId": "suprabhat-latest",
+                    "customerId": "20955",
+                    "supplierId": "HERITAGE",
+                    "facilityId": "20955"
+                }
+            }
+        ]
+    },
+    "7e148c3f-0781-4c0d-903f-50ef085412db": {
+        "status": "failed",
+        "logs": [
+            "File uploaded. Waiting for processing...",
+            "Started processing file...",
+            "Parsing XLSX file...",
+            "Found 2 API definitions.",
+            "Generating Postman Collection...",
+            "Generating Pytest structure...",
+            "ERROR: name 'e' is not defined"
+        ],
+        "artifacts": {
+            "postman": "artifacts_storage\\7e148c3f-0781-4c0d-903f-50ef085412db\\postman_collection.json"
+        },
+        "api_preview": [
+            {
+                "name": "Get Auth Token",
+                "method": "POST",
+                "url": "getAuthToken",
+                "ref_id": "AUTH-001",
+                "module": "Authentication",
+                "body": {
+                    "login.username": "invoice2",
+                    "login.password": "vst123",
+                    "tenantId": "suprabhat-latest"
+                },
+                "body_mode": "urlencoded",
+                "headers": {
+                    "Content-Type": "application/x-www-form-urlencoded"
+                },
+                "expected_response": {
+                    "token": "<authToken>"
+                },
+                "status": 200,
+                "auth_scope": "",
+                "token_variable": "authToken",
+                "is_token_generator": true,
+                "params": {}
+            },
+            {
+                "name": "Get Customer Profile Details",
+                "method": "GET",
+                "url": "getCustomerProfileDetails",
+                "ref_id": "CUST-001",
+                "module": "Customer",
+                "body": {},
+                "body_mode": "json",
+                "headers": {
+                    "token": "{{authToken}}"
+                },
+                "expected_response": "None",
+                "status": 200,
+                "auth_scope": "",
+                "token_variable": "token",
+                "is_token_generator": false,
+                "params": {
+                    "Key": "",
+                    "tenantId": "suprabhat-latest",
+                    "customerId": "20955",
+                    "supplierId": "HERITAGE",
+                    "facilityId": "20955"
+                }
+            }
+        ]
+    },
+    "3d5aed5f-fb89-4e39-8a23-b049ca56cc81": {
+        "status": "failed",
+        "logs": [
+            "File uploaded. Waiting for processing...",
+            "Started processing file...",
+            "Parsing XLSX file...",
+            "Found 2 API definitions.",
+            "Generating Postman Collection...",
+            "Generating Pytest structure...",
+            "ERROR: Invalid format specifier ' 0, \"passed\": 0, \"failed\": 0' for object of type 'str'"
+        ],
+        "artifacts": {
+            "postman": "artifacts_storage\\3d5aed5f-fb89-4e39-8a23-b049ca56cc81\\postman_collection.json"
+        },
+        "api_preview": [
+            {
+                "name": "Get Auth Token",
+                "method": "POST",
+                "url": "getAuthToken",
+                "ref_id": "AUTH-001",
+                "module": "Authentication",
+                "body": {
+                    "login.username": "invoice2",
+                    "login.password": "vst123",
+                    "tenantId": "suprabhat-latest"
+                },
+                "body_mode": "urlencoded",
+                "headers": {
+                    "Content-Type": "application/x-www-form-urlencoded"
+                },
+                "expected_response": {
+                    "token": "<authToken>"
+                },
+                "status": 200,
+                "auth_scope": "",
+                "token_variable": "authToken",
+                "is_token_generator": true,
+                "params": {}
+            },
+            {
+                "name": "Get Customer Profile Details",
+                "method": "GET",
+                "url": "getCustomerProfileDetails",
+                "ref_id": "CUST-001",
+                "module": "Customer",
+                "body": {},
+                "body_mode": "json",
+                "headers": {
+                    "token": "{{authToken}}"
+                },
+                "expected_response": "None",
+                "status": 200,
+                "auth_scope": "",
+                "token_variable": "token",
+                "is_token_generator": false,
+                "params": {
+                    "Key": "",
+                    "tenantId": "suprabhat-latest",
+                    "customerId": "20955",
+                    "supplierId": "HERITAGE",
+                    "facilityId": "20955"
+                }
+            }
+        ]
+    },
+    "e5a0fd02-977b-466d-b67f-8cc8962a682f": {
+        "status": "completed",
+        "logs": [
+            "File uploaded. Waiting for processing...",
+            "Started processing file...",
+            "Parsing XLSX file...",
+            "Found 2 API definitions.",
+            "Generating Postman Collection...",
+            "Generating Pytest structure...",
+            "Processing finished successfully."
+        ],
+        "artifacts": {
+            "postman": "artifacts_storage\\e5a0fd02-977b-466d-b67f-8cc8962a682f\\postman_collection.json",
+            "pytest": "artifacts_storage\\e5a0fd02-977b-466d-b67f-8cc8962a682f\\pytest_tests.zip"
+        },
+        "api_preview": [
+            {
+                "name": "Get Auth Token",
+                "method": "POST",
+                "url": "getAuthToken",
+                "ref_id": "AUTH-001",
+                "module": "Authentication",
+                "body": {
+                    "login.username": "invoice2",
+                    "login.password": "vst123",
+                    "tenantId": "suprabhat-latest"
+                },
+                "body_mode": "urlencoded",
+                "headers": {
+                    "Content-Type": "application/x-www-form-urlencoded"
+                },
+                "expected_response": {
+                    "token": "<authToken>"
+                },
+                "status": 200,
+                "auth_scope": "",
+                "token_variable": "authToken",
+                "is_token_generator": true,
+                "params": {}
+            },
+            {
+                "name": "Get Customer Profile Details",
+                "method": "GET",
+                "url": "getCustomerProfileDetails",
+                "ref_id": "CUST-001",
+                "module": "Customer",
+                "body": {},
+                "body_mode": "json",
+                "headers": {
+                    "token": "{{authToken}}"
+                },
+                "expected_response": "None",
+                "status": 200,
+                "auth_scope": "",
+                "token_variable": "token",
+                "is_token_generator": false,
+                "params": {
+                    "Key": "",
+                    "tenantId": "suprabhat-latest",
+                    "customerId": "20955",
+                    "supplierId": "HERITAGE",
+                    "facilityId": "20955"
+                }
+            }
+        ]
+    },
+    "c55387d9-0850-4772-afa9-325c7b2b6d3c": {
+        "status": "completed",
+        "logs": [
+            "File uploaded. Waiting for processing...",
+            "Started processing file...",
+            "Parsing XLSX file...",
+            "Found 2 API definitions.",
+            "Generating Postman Collection...",
+            "Generating Pytest structure...",
+            "Processing finished successfully."
+        ],
+        "artifacts": {
+            "postman": "artifacts_storage\\c55387d9-0850-4772-afa9-325c7b2b6d3c\\postman_collection.json",
+            "pytest": "artifacts_storage\\c55387d9-0850-4772-afa9-325c7b2b6d3c\\pytest_tests.zip"
+        },
+        "api_preview": [
+            {
+                "name": "Get Auth Token",
+                "method": "POST",
+                "url": "getAuthToken",
+                "ref_id": "AUTH-001",
+                "module": "Authentication",
+                "body": {
+                    "login.username": "invoice2",
+                    "login.password": "vst123",
+                    "tenantId": "suprabhat-latest"
+                },
+                "body_mode": "urlencoded",
+                "headers": {
+                    "Content-Type": "application/x-www-form-urlencoded"
+                },
+                "expected_response": {
+                    "token": "<authToken>"
+                },
+                "status": 200,
+                "auth_scope": "",
+                "token_variable": "authToken",
+                "is_token_generator": true,
+                "params": {}
+            },
+            {
+                "name": "Get Customer Profile Details",
+                "method": "GET",
+                "url": "getCustomerProfileDetails",
+                "ref_id": "CUST-001",
+                "module": "Customer",
+                "body": {},
+                "body_mode": "json",
+                "headers": {
+                    "token": "{{authToken}}"
+                },
+                "expected_response": "None",
+                "status": 200,
+                "auth_scope": "",
+                "token_variable": "token",
+                "is_token_generator": false,
+                "params": {
+                    "Key": "",
+                    "tenantId": "suprabhat-latest",
+                    "customerId": "20955",
+                    "supplierId": "HERITAGE",
+                    "facilityId": "20955"
+                }
+            }
+        ]
+    },
+    "f5fda903-f349-4b33-870e-7ca7ad0add01": {
+        "status": "completed",
+        "logs": [
+            "File uploaded. Waiting for processing...",
+            "Started processing file...",
+            "Parsing XLSX file...",
+            "Found 2 API definitions.",
+            "Generating Postman Collection...",
+            "Generating Pytest structure...",
+            "Processing finished successfully."
+        ],
+        "artifacts": {
+            "postman": "artifacts_storage\\f5fda903-f349-4b33-870e-7ca7ad0add01\\postman_collection.json",
+            "pytest": "artifacts_storage\\f5fda903-f349-4b33-870e-7ca7ad0add01\\pytest_tests.zip"
+        },
+        "api_preview": [
+            {
+                "name": "Get Auth Token",
+                "method": "POST",
+                "url": "getAuthToken",
+                "ref_id": "AUTH-001",
+                "module": "Authentication",
+                "body": {
+                    "login.username": "invoice2",
+                    "login.password": "vst123",
+                    "tenantId": "suprabhat-latest"
+                },
+                "body_mode": "urlencoded",
+                "headers": {
+                    "Content-Type": "application/x-www-form-urlencoded"
+                },
+                "expected_response": {
+                    "token": "<authToken>"
+                },
+                "status": 200,
+                "auth_scope": "",
+                "token_variable": "authToken",
+                "is_token_generator": true,
+                "params": {}
+            },
+            {
+                "name": "Get Customer Profile Details",
+                "method": "GET",
+                "url": "getCustomerProfileDetails",
+                "ref_id": "CUST-001",
+                "module": "Customer",
+                "body": {},
+                "body_mode": "json",
+                "headers": {
+                    "token": "{{authToken}}"
+                },
+                "expected_response": "None",
+                "status": 200,
+                "auth_scope": "",
+                "token_variable": "token",
+                "is_token_generator": false,
+                "params": {
+                    "Key": "",
+                    "tenantId": "suprabhat-latest",
+                    "customerId": "20955",
+                    "supplierId": "HERITAGE",
+                    "facilityId": "20955"
+                }
+            }
+        ]
+    },
+    "6725b4f1-8f4c-4f1f-834c-aef13e6bba8f": {
+        "status": "completed",
+        "logs": [
+            "File uploaded. Waiting for processing...",
+            "Started processing file...",
+            "Parsing XLSX file...",
+            "Found 2 API definitions.",
+            "Generating Postman Collection...",
+            "Generating Pytest structure...",
+            "Processing finished successfully."
+        ],
+        "artifacts": {
+            "postman": "artifacts_storage\\6725b4f1-8f4c-4f1f-834c-aef13e6bba8f\\postman_collection.json",
+            "pytest": "artifacts_storage\\6725b4f1-8f4c-4f1f-834c-aef13e6bba8f\\pytest_tests.zip"
+        },
+        "api_preview": [
+            {
+                "name": "Get Auth Token",
+                "method": "POST",
+                "url": "getAuthToken",
+                "ref_id": "AUTH-001",
+                "module": "Authentication",
+                "body": {
+                    "login.username": "invoice2",
+                    "login.password": "vst123",
+                    "tenantId": "suprabhat-latest"
+                },
+                "body_mode": "urlencoded",
+                "headers": {
+                    "Content-Type": "application/x-www-form-urlencoded"
+                },
+                "expected_response": {
+                    "token": "<authToken>"
+                },
+                "status": 200,
+                "auth_scope": "",
+                "token_variable": "authToken",
+                "is_token_generator": true,
+                "params": {}
+            },
+            {
+                "name": "Get Customer Profile Details",
+                "method": "GET",
+                "url": "getCustomerProfileDetails",
+                "ref_id": "CUST-001",
+                "module": "Customer",
+                "body": {},
+                "body_mode": "json",
+                "headers": {
+                    "token": "{{authToken}}"
+                },
+                "expected_response": "None",
+                "status": 200,
+                "auth_scope": "",
+                "token_variable": "token",
+                "is_token_generator": false,
+                "params": {
+                    "Key": "",
+                    "tenantId": "suprabhat-latest",
+                    "customerId": "20955",
+                    "supplierId": "HERITAGE",
+                    "facilityId": "20955"
+                }
+            }
+        ]
+    },
+    "db56fea0-83f1-4696-b806-80f5b62f0202": {
+        "status": "completed",
+        "logs": [
+            "File uploaded. Waiting for processing...",
+            "Started processing file...",
+            "Parsing XLSX file...",
+            "Found 2 API definitions.",
+            "Generating Postman Collection...",
+            "Generating Pytest structure...",
+            "Processing finished successfully."
+        ],
+        "artifacts": {
+            "postman": "artifacts_storage\\db56fea0-83f1-4696-b806-80f5b62f0202\\postman_collection.json",
+            "pytest": "artifacts_storage\\db56fea0-83f1-4696-b806-80f5b62f0202\\pytest_tests.zip"
+        },
+        "api_preview": [
+            {
+                "name": "Get Auth Token",
+                "method": "POST",
+                "url": "getAuthToken",
+                "ref_id": "AUTH-001",
+                "module": "Authentication",
+                "body": {
+                    "login.username": "invoice2",
+                    "login.password": "vst123",
+                    "tenantId": "suprabhat-latest"
+                },
+                "body_mode": "urlencoded",
+                "headers": {
+                    "Content-Type": "application/x-www-form-urlencoded",
+                    "User-Agent": "API-Factory-Test-Client/1.0"
+                },
+                "expected_response": {
+                    "token": "<authToken>"
+                },
+                "status": 200,
+                "auth_scope": "",
+                "token_variable": "authToken",
+                "is_token_generator": true,
+                "params": {}
+            },
+            {
+                "name": "Get Customer Profile Details",
+                "method": "GET",
+                "url": "getCustomerProfileDetails",
+                "ref_id": "CUST-001",
+                "module": "Customer",
+                "body": {},
+                "body_mode": "json",
+                "headers": {
+                    "token": "{{authToken}}"
+                },
+                "expected_response": "None",
+                "status": 200,
+                "auth_scope": "",
+                "token_variable": "token",
+                "is_token_generator": false,
+                "params": {
+                    "Key": "",
+                    "tenantId": "suprabhat-latest",
+                    "customerId": "20955",
+                    "supplierId": "HERITAGE",
+                    "facilityId": "20955"
+                }
+            }
+        ]
+    },
+    "76d062ea-eaf4-4a9e-a320-a77a3a698407": {
+        "status": "completed",
+        "logs": [
+            "File uploaded. Waiting for processing...",
+            "Started processing file...",
+            "Parsing XLSX file...",
+            "Found 2 API definitions.",
+            "Generating Postman Collection...",
+            "Generating Pytest structure...",
+            "Processing finished successfully."
+        ],
+        "artifacts": {
+            "postman": "artifacts_storage\\76d062ea-eaf4-4a9e-a320-a77a3a698407\\postman_collection.json",
+            "pytest": "artifacts_storage\\76d062ea-eaf4-4a9e-a320-a77a3a698407\\pytest_tests.zip"
+        },
+        "api_preview": [
+            {
+                "name": "Get Auth Token",
+                "method": "POST",
+                "url": "getAuthToken",
+                "ref_id": "AUTH-001",
+                "module": "Authentication",
+                "body": {
+                    "login.username": "invoice2",
+                    "login.password": "vst123",
+                    "tenantId": "suprabhat-latest"
+                },
+                "body_mode": "urlencoded",
+                "headers": {
+                    "Content-Type": "application/x-www-form-urlencoded",
+                    "User-Agent": "API-Factory-Test-Client/1.0"
+                },
+                "expected_response": {
+                    "token": "<authToken>"
+                },
+                "status": 200,
+                "auth_scope": "",
+                "token_variable": "authToken",
+                "is_token_generator": true,
+                "params": {}
+            },
+            {
+                "name": "Get Customer Profile Details",
+                "method": "GET",
+                "url": "getCustomerProfileDetails",
+                "ref_id": "CUST-001",
+                "module": "Customer",
+                "body": {},
+                "body_mode": "json",
+                "headers": {
+                    "token": "{{authToken}}"
+                },
+                "expected_response": "None",
+                "status": 200,
+                "auth_scope": "",
+                "token_variable": "token",
+                "is_token_generator": false,
+                "params": {
+                    "Key": "",
+                    "tenantId": "suprabhat-latest",
+                    "customerId": "20955",
+                    "supplierId": "HERITAGE",
+                    "facilityId": "20955"
+                }
+            }
+        ]
+    },
+    "93efe821-2ed3-49be-8e9e-f70304149d22": {
+        "status": "completed",
+        "logs": [
+            "File uploaded. Waiting for processing...",
+            "Started processing file...",
+            "Parsing XLSX file...",
+            "Found 2 API definitions.",
+            "Generating Postman Collection...",
+            "Generating Pytest structure...",
+            "Processing finished successfully."
+        ],
+        "artifacts": {
+            "postman": "artifacts_storage\\93efe821-2ed3-49be-8e9e-f70304149d22\\postman_collection.json",
+            "pytest": "artifacts_storage\\93efe821-2ed3-49be-8e9e-f70304149d22\\pytest_tests.zip"
+        },
+        "api_preview": [
+            {
+                "name": "Get Auth Token",
+                "method": "POST",
+                "url": "getAuthToken",
+                "ref_id": "AUTH-001",
+                "module": "Authentication",
+                "body": {
+                    "login.username": "invoice2",
+                    "login.password": "vst123",
+                    "tenantId": "suprabhat-latest"
+                },
+                "body_mode": "urlencoded",
+                "headers": {
+                    "Content-Type": "application/x-www-form-urlencoded",
+                    "User-Agent": "API-Factory-Test-Client/1.0"
+                },
+                "expected_response": {
+                    "token": "<authToken>"
+                },
+                "status": 200,
+                "auth_scope": "",
+                "token_variable": "authToken",
+                "is_token_generator": true,
+                "params": {}
+            },
+            {
+                "name": "Get Customer Profile Details",
+                "method": "GET",
+                "url": "getCustomerProfileDetails",
+                "ref_id": "CUST-001",
+                "module": "Customer",
+                "body": {},
+                "body_mode": "json",
+                "headers": {
+                    "token": "{{authToken}}"
+                },
+                "expected_response": "None",
+                "status": 200,
+                "auth_scope": "",
+                "token_variable": "token",
+                "is_token_generator": false,
+                "params": {
+                    "Key": "",
+                    "tenantId": "suprabhat-latest",
+                    "customerId": "20955",
+                    "supplierId": "HERITAGE",
+                    "facilityId": "20955"
+                }
+            }
+        ]
+    },
+    "95ae3e57-cf29-4ef7-ab22-0fefd529a83b": {
+        "status": "completed",
+        "logs": [
+            "File uploaded. Waiting for processing...",
+            "Started processing file...",
+            "Parsing XLSX file...",
+            "Found 2 API definitions.",
+            "Generating Postman Collection...",
+            "Generating Pytest structure...",
+            "Processing finished successfully."
+        ],
+        "artifacts": {
+            "postman": "artifacts_storage\\95ae3e57-cf29-4ef7-ab22-0fefd529a83b\\postman_collection.json",
+            "pytest": "artifacts_storage\\95ae3e57-cf29-4ef7-ab22-0fefd529a83b\\pytest_tests.zip"
+        },
+        "api_preview": [
+            {
+                "name": "Get Auth Token",
+                "method": "POST",
+                "url": "getAuthToken",
+                "ref_id": "AUTH-001",
+                "module": "Authentication",
+                "body": {
+                    "login.username": "invoice2",
+                    "login.password": "vst123",
+                    "tenantId": "suprabhat-latest"
+                },
+                "body_mode": "urlencoded",
+                "headers": {
+                    "Content-Type": "application/x-www-form-urlencoded",
+                    "User-Agent": "API-Factory-Test-Client/1.0"
+                },
+                "expected_response": {
+                    "token": "<authToken>"
+                },
+                "status": 200,
+                "auth_scope": "",
+                "token_variable": "authToken",
+                "is_token_generator": true,
+                "params": {}
+            },
+            {
+                "name": "Get Customer Profile Details",
+                "method": "GET",
+                "url": "getCustomerProfileDetails",
+                "ref_id": "CUST-001",
+                "module": "Customer",
+                "body": {},
+                "body_mode": "json",
+                "headers": {
+                    "token": "{{authToken}}"
+                },
+                "expected_response": "None",
+                "status": 200,
+                "auth_scope": "",
+                "token_variable": "token",
+                "is_token_generator": false,
+                "params": {
+                    "Key": "",
+                    "tenantId": "suprabhat-latest",
+                    "customerId": "20955",
+                    "supplierId": "HERITAGE",
+                    "facilityId": "20955"
+                }
+            }
+        ]
+    },
+    "c9a4efa1-6f58-4c87-a147-3102dfae2d73": {
+        "status": "failed",
+        "logs": [
+            "File uploaded. Waiting for processing...",
+            "Started processing file...",
+            "Parsing XLSX file...",
+            "Found 2 API definitions.",
+            "Generating Postman Collection...",
+            "Generating Pytest structure...",
+            "ERROR: name 't' is not defined"
+        ],
+        "artifacts": {
+            "postman": "artifacts_storage\\c9a4efa1-6f58-4c87-a147-3102dfae2d73\\postman_collection.json"
+        },
+        "api_preview": [
+            {
+                "name": "Get Auth Token",
+                "method": "POST",
+                "url": "getAuthToken",
+                "ref_id": "AUTH-001",
+                "module": "Authentication",
+                "body": {
+                    "login.username": "invoice2",
+                    "login.password": "vst123",
+                    "tenantId": "suprabhat-latest"
+                },
+                "body_mode": "urlencoded",
+                "headers": {
+                    "Content-Type": "application/x-www-form-urlencoded"
+                },
+                "expected_response": {
+                    "token": "<authToken>"
+                },
+                "status": 200,
+                "auth_scope": "",
+                "token_variable": "authToken",
+                "is_token_generator": true,
+                "params": {}
+            },
+            {
+                "name": "Get Customer Profile Details",
+                "method": "GET",
+                "url": "getCustomerProfileDetails",
+                "ref_id": "CUST-001",
+                "module": "Customer",
+                "body": {},
+                "body_mode": "json",
+                "headers": {
+                    "token": "{{authToken}}"
+                },
+                "expected_response": "None",
+                "status": 200,
+                "auth_scope": "",
+                "token_variable": "token",
+                "is_token_generator": false,
+                "params": {
+                    "Key": "",
+                    "tenantId": "suprabhat-latest",
+                    "customerId": "20955",
+                    "supplierId": "HERITAGE",
+                    "facilityId": "20955"
+                }
+            }
+        ]
+    },
+    "6cd9e340-92b2-4f7f-890a-e3ec796cba65": {
+        "status": "failed",
+        "logs": [
+            "File uploaded. Waiting for processing...",
+            "Started processing file...",
+            "Parsing XLSX file...",
+            "Found 2 API definitions.",
+            "Generating Postman Collection...",
+            "Generating Pytest structure...",
+            "ERROR: name 't' is not defined"
+        ],
+        "artifacts": {
+            "postman": "artifacts_storage\\6cd9e340-92b2-4f7f-890a-e3ec796cba65\\postman_collection.json"
+        },
+        "api_preview": [
+            {
+                "name": "Get Auth Token",
+                "method": "POST",
+                "url": "getAuthToken",
+                "ref_id": "AUTH-001",
+                "module": "Authentication",
+                "body": {
+                    "login.username": "invoice2",
+                    "login.password": "vst123",
+                    "tenantId": "suprabhat-latest"
+                },
+                "body_mode": "urlencoded",
+                "headers": {
+                    "Content-Type": "application/x-www-form-urlencoded"
+                },
+                "expected_response": {
+                    "token": "<authToken>"
+                },
+                "status": 200,
+                "auth_scope": "",
+                "token_variable": "authToken",
+                "is_token_generator": true,
+                "params": {}
+            },
+            {
+                "name": "Get Customer Profile Details",
+                "method": "GET",
+                "url": "getCustomerProfileDetails",
+                "ref_id": "CUST-001",
+                "module": "Customer",
+                "body": {},
+                "body_mode": "json",
+                "headers": {
+                    "token": "{{authToken}}"
+                },
+                "expected_response": "None",
+                "status": 200,
+                "auth_scope": "",
+                "token_variable": "token",
+                "is_token_generator": false,
+                "params": {
+                    "Key": "",
+                    "tenantId": "suprabhat-latest",
+                    "customerId": "20955",
+                    "supplierId": "HERITAGE",
+                    "facilityId": "20955"
+                }
+            }
+        ]
+    },
+    "28a9e3e1-fb20-457c-99df-b78f5248e063": {
+        "status": "failed",
+        "logs": [
+            "File uploaded. Waiting for processing...",
+            "Started processing file...",
+            "Parsing XLSX file...",
+            "Found 2 API definitions.",
+            "Generating Postman Collection...",
+            "Generating Pytest structure...",
+            "ERROR: Invalid format specifier ' total,\n            \"passed\": passed,\n            \"failed\": failed\n        ' for object of type 'str'"
+        ],
+        "artifacts": {
+            "postman": "artifacts_storage\\28a9e3e1-fb20-457c-99df-b78f5248e063\\postman_collection.json"
+        },
+        "api_preview": [
+            {
+                "name": "Get Auth Token",
+                "method": "POST",
+                "url": "getAuthToken",
+                "ref_id": "AUTH-001",
+                "module": "Authentication",
+                "body": {
+                    "login.username": "invoice2",
+                    "login.password": "vst123",
+                    "tenantId": "suprabhat-latest"
+                },
+                "body_mode": "urlencoded",
+                "headers": {
+                    "Content-Type": "application/x-www-form-urlencoded"
+                },
+                "expected_response": {
+                    "token": "<authToken>"
+                },
+                "status": 200,
+                "auth_scope": "",
+                "token_variable": "authToken",
+                "is_token_generator": true,
+                "params": {}
+            },
+            {
+                "name": "Get Customer Profile Details",
+                "method": "GET",
+                "url": "getCustomerProfileDetails",
+                "ref_id": "CUST-001",
+                "module": "Customer",
+                "body": {},
+                "body_mode": "json",
+                "headers": {
+                    "token": "{{authToken}}"
+                },
+                "expected_response": "None",
+                "status": 200,
+                "auth_scope": "",
+                "token_variable": "token",
+                "is_token_generator": false,
+                "params": {
+                    "Key": "",
+                    "tenantId": "suprabhat-latest",
+                    "customerId": "20955",
+                    "supplierId": "HERITAGE",
+                    "facilityId": "20955"
+                }
+            }
+        ]
+    },
+    "c7abb7c4-10ab-4e9d-a5b3-bb9277d0e3d3": {
+        "status": "completed",
+        "logs": [
+            "File uploaded. Waiting for processing...",
+            "Started processing file...",
+            "Parsing XLSX file...",
+            "Found 2 API definitions.",
+            "Generating Postman Collection...",
+            "Generating Pytest structure...",
+            "Processing finished successfully."
+        ],
+        "artifacts": {
+            "postman": "artifacts_storage\\c7abb7c4-10ab-4e9d-a5b3-bb9277d0e3d3\\postman_collection.json",
+            "pytest": "artifacts_storage\\c7abb7c4-10ab-4e9d-a5b3-bb9277d0e3d3\\pytest_tests.zip"
+        },
+        "api_preview": [
+            {
+                "name": "Get Auth Token",
+                "method": "POST",
+                "url": "getAuthToken",
+                "ref_id": "AUTH-001",
+                "module": "Authentication",
+                "body": {
+                    "login.username": "invoice2",
+                    "login.password": "vst123",
+                    "tenantId": "suprabhat-latest"
+                },
+                "body_mode": "urlencoded",
+                "headers": {
+                    "Content-Type": "application/x-www-form-urlencoded",
+                    "User-Agent": "API-Factory-Test-Client/1.0"
+                },
+                "expected_response": {
+                    "token": "<authToken>"
+                },
+                "status": 200,
+                "auth_scope": "",
+                "token_variable": "authToken",
+                "is_token_generator": true,
+                "params": {}
+            },
+            {
+                "name": "Get Customer Profile Details",
+                "method": "GET",
+                "url": "getCustomerProfileDetails",
+                "ref_id": "CUST-001",
+                "module": "Customer",
+                "body": {},
+                "body_mode": "json",
+                "headers": {
+                    "token": "{{authToken}}"
+                },
+                "expected_response": "None",
+                "status": 200,
+                "auth_scope": "",
+                "token_variable": "token",
+                "is_token_generator": false,
+                "params": {
+                    "Key": "",
+                    "tenantId": "suprabhat-latest",
+                    "customerId": "20955",
+                    "supplierId": "HERITAGE",
+                    "facilityId": "20955"
+                }
+            }
+        ]
     }
 }

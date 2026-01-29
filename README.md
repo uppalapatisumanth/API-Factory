@@ -70,6 +70,26 @@ We handle login for you automatically.
 
 ---
 
+## 🚀 Advanced Features
+
+### 1. Consolidated Reporting (Master Report)
+You don't need to fit everything into one file!
+*   **How it works**: Run `pytest` on multiple API folders (e.g., `pytest tests/api1`, then `pytest tests/api2`).
+*   **The Magic**: The system **merges** the results into a single `index.html` Master Report.
+*   The report grows as you test more APIs.
+
+### 2. Source Code in Reports
+Why guess what happened?
+*   Open the HTML Report.
+*   Click on any test case.
+*   Click the **"Code"** tab.
+*   **See the exact Python code** that ran for that test!
+
+### 3. Smart "About"
+*   Click the **(i)** icon in the report header to see version info and details.
+
+---
+
 ## ❓ FAQ
 
 ### Can I copy-paste a full browser URL?
@@ -77,6 +97,24 @@ We handle login for you automatically.
 
 ### What if my JSON is invalid?
 The system will tell you exactly which row has the error. Just fix the quotes or commas in Excel and re-upload.
+
+---
+
+---
+
+## ☁️ Deploy to GitHub
+
+Want to see your reports online?
+
+1.  **Push your code** to GitHub.
+2.  Go to your Repository **Settings** > **Pages**.
+3.  Under **Build and deployment**, select **Source**: `GitHub Actions`.
+    *   *(Or if using the legacy method, select `gh-pages` branch if created by the action)*. 
+    *   *Note: Our workflow uses `upload-pages-artifact`, so normally you just go to Settings > Pages and ensure strict security is set or just wait for the Action to run.*
+    *   Actually, usually you just need to enable Pages.
+    *   **Simpler Instruction**: Go to **Settings** > **Pages**. Set **Source** to **GitHub Actions**.
+4.  The "Deploy Report to Pages" workflow will run automatically.
+5.  Your report will be live at: `https://<username>.github.io/<repo-name>/`
 
 ---
 *Powered by API Factory.*

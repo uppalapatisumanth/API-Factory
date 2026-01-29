@@ -31,7 +31,7 @@ if not ARTIFACTS_DIR.exists():
 
 # --- Integrated Existing Functionality ---
 try:
-    from backend.routers import processing
+    from routers import processing
     app.include_router(processing.router)
     logger.info("Successfully loaded 'processing' router.")
 except Exception as e:
