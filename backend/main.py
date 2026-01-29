@@ -31,15 +31,18 @@ if not ARTIFACTS_DIR.exists():
     ARTIFACTS_DIR.mkdir(parents=True, exist_ok=True)
 
 # --- Integrated Existing Functionality ---
-try:
-    from routers import processing
-    app.include_router(processing.router)
-    logger.info("Successfully loaded 'processing' router.")
-except Exception as e:
-    logger.error(f"Failed to load 'processing' router: {e}")
-    # We continue so the basic server still runs (Connection Refused fix)
+# --- Integrated Existing Functionality ---
+from routers import processing
+app.include_router(processing.router)
+logger.info("Successfully loaded 'processing' router.")
 
 # 7. Health Check
+@app.on_event("startup")
+async def startup_event():
+    logger.info("Registered Routes:")
+    for route in app.routes:
+        logger.info(f"{route.path} [{route.methods}]")
+
 @app.get("/health")
 def health_check():
     return {"status": "ok"}

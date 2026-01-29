@@ -96,6 +96,7 @@ def process_file_task(task_id: str, file_content: bytes, filename: str):
         traceback.print_exc()
 
 @router.post("/upload")
+@router.post("/upload/", include_in_schema=False)
 async def upload_file(background_tasks: BackgroundTasks, file: UploadFile = File(...)):
     log_file = r"d:\ais\api\backend\backend_debug.log"
     try:
